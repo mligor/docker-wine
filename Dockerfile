@@ -1,7 +1,7 @@
-FROM debian:stretch-slim
+FROM i386/debian:stretch-slim
 
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends wine32
+RUN apt-get install -y --no-install-recommends wine
 # Cleanup 
 RUN apt-get clean autoclean \
     && apt-get autoremove --yes \
